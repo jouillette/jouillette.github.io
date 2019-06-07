@@ -73,6 +73,10 @@ body {
         font-family: 'Font Awesome 5 Free';
         font-weight: 900;
         margin-right: 0.5em; }
+  body address {
+    margin-bottom: 0.5em; }
+  body em {
+    font-style: italic; }
 
 .wrapper {
   width: 100%;
@@ -80,10 +84,19 @@ body {
   margin: 0 auto;
   padding: 0 1em; }
 
+.type-this.done:after {
+  content: '';
+  border-right: 3px solid #ffffff;
+  padding-right: 0.2em;
+  animation: blink .8s step-end infinite alternate;
+  white-space: nowrap; }
+@keyframes blink {
+  50% {
+    border-color: transparent; } }
 .main-nav {
   position: fixed;
   width: 100%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   padding: 0.5em 0.5em;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1); }
   .main-nav ul {
@@ -105,13 +118,12 @@ body {
 
 #header {
   background: url("img/cover.jpg") top center no-repeat;
-  background-size: cover;
-  min-height: 800px; }
+  background-size: cover; }
   #header .cover {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 100%;
+    height: 800px;
     width: 100%; }
     #header .cover h1 {
       font-family: "Raleway", sans-serif;
@@ -124,7 +136,7 @@ body {
         content: '';
         display: block;
         width: 250px;
-        border-bottom: 1x solid #ffffff;
+        border-bottom: 1px solid #ffffff;
         margin: 0.2em 0; }
     #header .cover h2 {
       font-family: "Lato", sans-serif;
@@ -133,23 +145,26 @@ body {
       color: #ffffff;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
       margin-bottom: 0; }
-      #header .cover h2:after {
-        content: '';
-        border-right: 3px solid #ffffff;
-        padding-right: 0.2em;
-        animation: blink .8s step-end infinite alternate; }
-@keyframes blink {
-  50% {
-    border-color: transparent; } }
+
 #footer {
   padding: 4em 0;
   background: #333333;
   color: #ffffff; }
-  #footer h2 {
-    color: #64b2b2; }
+  #footer .contact-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #footer .contact-wrap h2 {
+      color: #ffffff;
+      margin: 0.5em 1em; }
+    #footer .contact-wrap h3, #footer .contact-wrap h4 {
+      margin: 0.5em 1em; }
+      #footer .contact-wrap h3 a, #footer .contact-wrap h4 a {
+        color: #64b2b2;
+        text-decoration: none; }
 
 #main > section {
-  padding: 2em 0; }
+  padding: 4em 0; }
   #main > section .wrapper {
     max-width: 1024px;
     transition: opacity 750ms ease-in;
@@ -157,47 +172,84 @@ body {
     #main > section .wrapper.hidden {
       opacity: 0; }
     #main > section .wrapper h2 {
-      color: #f5054e; }
-  #main > section.about, #main > section.education {
-    background: #64b2b2;
-    color: #ffffff;
-    text-align: center;
-    padding: 4em 0 5em; }
-    #main > section.about .wrapper, #main > section.education .wrapper {
-      max-width: 700px; }
-      #main > section.about .wrapper h2, #main > section.education .wrapper h2 {
-        color: #ffffff; }
-        #main > section.about .wrapper h2:after, #main > section.education .wrapper h2:after {
+      color: #fe0036; }
+  #main > section.about {
+    background: url("img/about.jpg") top center no-repeat;
+    background-size: cover;
+    color: #ffffff; }
+    #main > section.about .wrapper {
+      max-width: 800px; }
+      #main > section.about .wrapper h2 {
+        color: #ffffff;
+        text-align: center; }
+        #main > section.about .wrapper h2:after {
           content: '';
           display: block;
           width: 200px;
           border-bottom: 1px solid #ffffff;
           margin: 1em auto; }
-  #main > section.skillset {
-    padding-top: 4em; }
-    #main > section.skillset h2:after {
-      content: '';
-      display: block;
-      width: 200px;
-      border-bottom: 1px solid #f5054e;
-      margin: 1em 0; }
-    #main > section.skillset .skillset-wrap {
+      #main > section.about .wrapper .about-wrap {
+        display: flex;
+        justify-content: center; }
+        #main > section.about .wrapper .about-wrap .left {
+          border-radius: 50em; }
+        #main > section.about .wrapper .about-wrap .right {
+          padding-left: 2em; }
+  #main > section.skillset h2:after {
+    content: '';
+    display: block;
+    width: 200px;
+    border-bottom: 1px solid #999999;
+    margin: 1em 0; }
+  #main > section.skillset .skillset-wrap {
+    display: flex;
+    justify-content: space-between; }
+    #main > section.skillset .skillset-wrap .left {
+      flex: 1 1 auto;
+      width: 75%;
+      padding-right: 2em; }
+    #main > section.skillset .skillset-wrap .right {
+      flex: 1 1 auto;
+      width: 200px; }
+  #main > section.experience {
+    background: url("img/dark-bg.jpg") top center no-repeat;
+    background-size: cover;
+    color: #ffffff; }
+    #main > section.experience h2 {
+      color: #ffffff; }
+      #main > section.experience h2:after {
+        content: '';
+        display: block;
+        width: 200px;
+        border-bottom: 1px solid #64b2b2;
+        margin: 1em 0; }
+    #main > section.experience .experience-wrap {
       display: flex;
       justify-content: space-between; }
-      #main > section.skillset .skillset-wrap .left {
-        flex: 1 1 auto;
-        width: 75%;
-        padding-right: 2em; }
-      #main > section.skillset .skillset-wrap .right {
+      #main > section.experience .experience-wrap .left {
         flex: 1 1 auto;
         width: 200px; }
-  #main > section.experience {
-    padding-bottom: 4em; }
-    #main > section.experience h2:after {
-      content: '';
-      display: block;
-      width: 200px;
-      border-bottom: 1px solid #f5054e;
-      margin: 1em 0; }
+        #main > section.experience .experience-wrap .left a {
+          color: #64b2b2;
+          text-decoration: none; }
+      #main > section.experience .experience-wrap .right {
+        flex: 1 1 auto;
+        width: 75%;
+        padding-left: 2em; }
+  #main > section.education {
+    background: url("img/education.jpg") top center no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center; }
+    #main > section.education .wrapper {
+      max-width: 700px; }
+      #main > section.education .wrapper h2 {
+        color: #ffffff; }
+        #main > section.education .wrapper h2:after {
+          content: '';
+          display: block;
+          width: 200px;
+          border-bottom: 1px solid #ffffff;
+          margin: 1em auto; }
 
 /*# sourceMappingURL=style.css.map */

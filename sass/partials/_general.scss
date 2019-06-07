@@ -4,3 +4,19 @@
 	margin:0 auto;
 	padding:0 1em;
 }
+
+.type-this.done {
+	&:after{
+		content:'';
+		border-right:3px solid $white;
+		padding-right:0.2em;
+		animation: blink .8s step-end infinite alternate;
+		white-space: nowrap;
+
+		@keyframes blink { 
+		   50% {
+		   		border-color: transparent;
+		   	} 
+		}
+	}
+}

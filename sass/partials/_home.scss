@@ -1,6 +1,6 @@
 #main {
 	> section {
-		padding:2em 0;
+		padding:4em 0;
 
 		.wrapper {
 			max-width: 1024px;
@@ -16,18 +16,17 @@
 			}
 		}
 
-		&.about,
-		&.education {
-			background:$teal;
+		&.about {
+			background:url('img/about.jpg') top center no-repeat;
+			background-size:cover;
 			color:$white;
-			text-align: center;
-			padding:4em 0 5em;
 
 			.wrapper {
-				max-width: 700px;
+				max-width: 800px;
 
 				h2 {
 					color:$white;
+					text-align:center;
 
 					&:after {
 						content:'';
@@ -37,19 +36,31 @@
 						margin:1em auto;
 					}
 				}
+
+
+				.about-wrap {
+					display: flex;
+					justify-content: center;
+					
+					.left {
+						border-radius: 50em;
+					}
+
+					.right {
+						padding-left:2em;
+					}
+				}
 			}
 		}
 
 
 		&.skillset {
-			padding-top:4em;
-
 			h2 {
 				&:after {
 					content:'';
 					display: block;
 					width:200px;
-					border-bottom:1px solid $red;
+					border-bottom:1px solid $grey;
 					margin:1em 0;
 				}
 			}
@@ -72,15 +83,62 @@
 		}
 
 		&.experience {
-			padding-bottom:4em;
+			background:url('img/dark-bg.jpg') top center no-repeat;
+			background-size:cover;
+			color:$white;
 
 			h2 {
+				color:$white;
 				&:after {
 					content:'';
 					display: block;
 					width:200px;
-					border-bottom:1px solid $red;
+					border-bottom:1px solid $teal;
 					margin:1em 0;
+				}
+			}
+
+			.experience-wrap {
+				display: flex;
+				justify-content: space-between;
+
+				.left {
+					flex:1 1 auto;
+					width:200px;
+
+					a {
+						color:$teal;
+						text-decoration: none;
+					}
+				}
+
+				.right {
+					flex:1 1 auto;
+					width:75%;
+					padding-left:2em;
+				}
+			}
+		}
+
+		&.education {
+			background:url('img/education.jpg') top center no-repeat;
+			background-size:cover;
+			color:$white;
+			text-align: center;
+
+			.wrapper {
+				max-width: 700px;
+
+				h2 {
+					color:$white;
+
+					&:after {
+						content:'';
+						display: block;
+						width:200px;
+						border-bottom:1px solid $white;
+						margin:1em auto;
+					}
 				}
 			}
 		}
