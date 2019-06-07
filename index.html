@@ -1,38 +1,96 @@
-<style src="style.css"></style>
+<title>Joe Ouillette | Web Developer</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script src="js/site.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,900|Raleway:100,200,400,900&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
 
-<header>
-	<nav role="navigation">
+<nav class="main-nav" role="navigation">
+	<div class="wrapper">
 		<ul>
-			<li>Home</li>
-			<li>About</li>
-			<li>Skillset</li>
-			<li>Experience</li>
-			<li>Contact</li>
+			<li data-id="cover">Home</li>
+			<li data-id="about">About</li>
+			<li data-id="skillset">Skillset</li>
+			<li data-id="experience">Experience</li>
+			<li data-id="education">Education</li>
+			<li data-id="contact">Contact</li>
 		</ul>
-	</nav>
-	<section class="cover">
-		<h1>Hello!</h1>
-	</section>
+	</div>
+</nav>
+
+<header id="header">
+	<div class="wrapper">
+		<section class="cover">
+			<div class="cover-content">
+				<h1>Hello World!</h1>
+				<h2>My name is Joe Ouillette and I'm a Web Developer.</h2>
+			</div>
+		</section>
+	</div>
 </header>
 
-<main role="main">
+<main id="main" role="main">
 	<section class="about">
-		
+		<div class="wrapper">
+			<h2>All About Me.</h2>
+			<p>Lorem ipsum dolor amet air plant unicorn 90's before they sold out synth. Fingerstache 3 wolf moon forage cliche, everyday carry austin small batch cred plaid VHS fashion axe poutine.</p>
+			<p>Microdosing activated charcoal pinterest af tilde. Man braid palo santo kale chips selfies brooklyn authentic sartorial hexagon wayfarers next level. Shaman everyday carry cliche crucifix. Irony four loko godard, ugh poutine pop-up poke vinyl adaptogen kogi lyft offal DIY.</p>
+		</div>
 	</section>
 
 	<section class="skillset">
-		
+		<div class="wrapper">
+			<h2>These are some of the things I can do.</h2>
+			<div class="skillset-wrap">
+				<div class="left">
+					<p>Lorem ipsum dolor amet air plant unicorn 90's before they sold out synth. Fingerstache 3 wolf moon forage cliche, everyday carry austin small batch cred plaid VHS fashion axe poutine. Microdosing activated charcoal pinterest af tilde. Man braid palo santo kale chips selfies brooklyn authentic sartorial hexagon wayfarers next level. Shaman everyday carry cliche crucifix. Irony four loko godard, ugh poutine pop-up poke vinyl adaptogen kogi lyft offal DIY.</p>
+					<p>Sriracha plaid literally listicle kickstarter offal vinyl meggings gastropub keffiyeh salvia. Green juice shabby chic VHS, umami DIY health goth hella. Adaptogen ethical echo park, salvia gochujang squid messenger bag scenester. Lomo yuccie offal +1 3 wolf moon air plant pork belly man bun distillery blog disrupt unicorn fingerstache pok pok. Fixie drinking vinegar distillery bitters.</p>
+				</div>
+				<div class="right">
+					<ul>
+						<li>Wordpress</li>
+						<li>WooCommerce</li>
+						<li>MySQL</li>
+						<li>PHP</li>
+						<li>CSS3</li>
+						<li>SASS</li>
+						<li>JS</li>
+						<li>JQuery</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<section class="experience">
-		
+		<div class="wrapper">
+			<h2>This is the section where I list my experience.</h2>
+			<p>Lorem ipsum dolor amet air plant unicorn 90's before they sold out synth. Fingerstache 3 wolf moon forage cliche, everyday carry austin small batch cred plaid VHS fashion axe poutine. Microdosing activated charcoal pinterest af tilde. Man braid palo santo kale chips selfies brooklyn authentic sartorial hexagon wayfarers next level. Shaman everyday carry cliche crucifix. Irony four loko godard, ugh poutine pop-up poke vinyl adaptogen kogi lyft offal DIY.</p>
+
+			<h3>buildcreate studios</h3>
+		</div>
+	</section>
+
+	<section class="education">
+		<div class="wrapper">
+			<h2>Education.</h2>
+			<p>Lorem ipsum dolor amet air plant unicorn 90's before they sold out synth. Fingerstache 3 wolf moon forage cliche, everyday carry austin small batch cred plaid VHS fashion axe poutine. Microdosing activated charcoal pinterest af tilde. Man braid palo santo kale chips selfies brooklyn authentic sartorial hexagon wayfarers next level. Shaman everyday carry cliche crucifix. Irony four loko godard, ugh poutine pop-up poke vinyl adaptogen kogi lyft offal DIY.</p>
+			
+			<h3>Central Michigan University</h3>
+	
+			<h3>Washtenaw Community College</h3>		
+		</div>
 	</section>
 </main>
 
-<footer>
+<footer id="footer">
 	<section class="contact">
-		
+		<div class="wrapper">
+			<h2>This is the section where I put my contact information.</h2>
+			<p>Lorem ipsum dolor amet air plant unicorn 90's before they sold out synth. Fingerstache 3 wolf moon forage cliche, everyday carry austin small batch cred plaid VHS fashion axe poutine. Microdosing activated charcoal pinterest af tilde. Man braid palo santo kale chips selfies brooklyn authentic sartorial hexagon wayfarers next level. Shaman everyday carry cliche crucifix. Irony four loko godard, ugh poutine pop-up poke vinyl adaptogen kogi lyft offal DIY.</p>
+			<p>Sriracha plaid literally listicle kickstarter offal vinyl meggings gastropub keffiyeh salvia. Green juice shabby chic VHS, umami DIY health goth hella. Adaptogen ethical echo park, salvia gochujang squid messenger bag scenester. Lomo yuccie offal +1 3 wolf moon air plant pork belly man bun distillery blog disrupt unicorn fingerstache pok pok. Fixie drinking vinegar distillery bitters.</p>
+		</div>		
 	</section>
 </footer>
