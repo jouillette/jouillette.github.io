@@ -1,0 +1,50 @@
+body {
+	font-family:'Lato';
+	font-size:18px;
+
+	h1,h2,h3,h4,h5,h6 {
+		@include raleway_light();
+		margin-bottom:0.5em;
+	}
+
+	h1 {
+		font-size:3em;
+	}
+
+	h2 {
+		font-size:2em;
+	}
+
+	h3 {
+		font-size:1.6em;
+	}
+
+	h4, h5, h6 {
+		font-size:1.4em;
+	}
+
+	p {
+		line-height: 1.4em;
+		margin-bottom:1.4em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	ul {
+		margin-bottom:1.4em;
+
+		li {
+			margin-bottom:0.8em;
+			padding-left:1.5em;
+
+			&:before {
+				color:$teal;
+				content:'\f105';
+				@include fas();
+				margin-right:0.5em;
+			}
+		}
+	}
+}

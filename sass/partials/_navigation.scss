@@ -1,0 +1,30 @@
+.main-nav {
+	position:fixed;
+	width:100%;
+	background:rgba($white, 0.9);
+	padding:0.5em 0.5em;
+	box-shadow: 0 0 1px 0 rgba($black, 0.1);
+
+	ul {
+		text-align:center;
+		margin:0;
+
+		li {
+			display: inline-block;
+			margin:0 0.5em;
+			padding:0.5em;
+			text-transform: uppercase;
+			@include lato_light();
+			transition: color 100ms ease-in;
+
+			&:hover {
+				cursor:pointer;
+				color:$teal;
+			}
+
+			&:before {
+				content:none;
+			}
+		}
+	}
+}

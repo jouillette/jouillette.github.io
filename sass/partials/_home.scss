@@ -1,0 +1,88 @@
+#main {
+	> section {
+		padding:2em 0;
+
+		.wrapper {
+			max-width: 1024px;
+			transition: opacity 750ms ease-in;
+			opacity:1;
+
+			&.hidden {
+				opacity: 0;
+			}
+
+			h2 {
+				color:$red;
+			}
+		}
+
+		&.about,
+		&.education {
+			background:$teal;
+			color:$white;
+			text-align: center;
+			padding:4em 0 5em;
+
+			.wrapper {
+				max-width: 700px;
+
+				h2 {
+					color:$white;
+
+					&:after {
+						content:'';
+						display: block;
+						width:200px;
+						border-bottom:1px solid $white;
+						margin:1em auto;
+					}
+				}
+			}
+		}
+
+
+		&.skillset {
+			padding-top:4em;
+
+			h2 {
+				&:after {
+					content:'';
+					display: block;
+					width:200px;
+					border-bottom:1px solid $red;
+					margin:1em 0;
+				}
+			}
+
+			.skillset-wrap {
+				display: flex;
+				justify-content: space-between;
+
+				.left {
+					flex:1 1 auto;
+					width:75%;
+					padding-right:2em;
+				}
+
+				.right {
+					flex:1 1 auto;
+					width:200px;
+				}
+			}
+		}
+
+		&.experience {
+			padding-bottom:4em;
+
+			h2 {
+				&:after {
+					content:'';
+					display: block;
+					width:200px;
+					border-bottom:1px solid $red;
+					margin:1em 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+#header {
+	background:url('img/cover.jpg') top center no-repeat;
+	background-size:cover;
+	min-height: 800px;
+
+	.cover {
+		display: flex;
+		align-items:center;
+		justify-content: flex-start;
+		height:100%;
+		width:100%;
+
+		h1 {
+			@include raleway_thin();
+			font-size:6em;
+			color:$white;
+			text-shadow: 1px 1px 3px rgba($black, 0.2);
+			margin-bottom:0;
+
+			&:after {
+				content:'';
+				display: block;
+				width:250px;
+				border-bottom:1x solid $white;
+				margin:0.2em 0;
+			}
+		}
+
+		h2 {
+			@include lato_light();
+			font-size:3em;
+			color:$white;
+			text-shadow: 1px 1px 3px rgba($black, 0.2);
+			margin-bottom:0;
+
+			&:after{
+				content:'';
+				border-right:3px solid $white;
+				padding-right:0.2em;
+				animation: blink .8s step-end infinite alternate;
+
+				@keyframes blink { 
+				   50% {
+				   		border-color: transparent;
+				   	} 
+				}
+			
+			}
+		}
+	}
+}
