@@ -95,6 +95,9 @@ body {
     border-color: transparent; } }
 .main-nav {
   position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.95);
   padding: 0.5em 0.5em;
@@ -115,10 +118,13 @@ body {
         color: #64b2b2; }
       .main-nav ul li:before {
         content: none; }
+      .main-nav ul li.active {
+        color: #64b2b2; }
 
 #header {
   background: url("img/cover.jpg") top center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
   #header .cover {
     display: flex;
     align-items: center;
@@ -145,6 +151,16 @@ body {
       color: #ffffff;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
       margin-bottom: 0; }
+  #header .next {
+    position: absolute;
+    left: calc(50% - 40px);
+    bottom: 2em;
+    width: 40px;
+    height: 40px;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    transform: rotate(45deg);
+    cursor: pointer; }
 
 #footer {
   padding: 4em 0;
@@ -153,7 +169,8 @@ body {
   #footer .contact-wrap {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    margin-bottom: 1em; }
     #footer .contact-wrap h2 {
       color: #ffffff;
       margin: 0.5em 1em; }
@@ -162,11 +179,13 @@ body {
       #footer .contact-wrap h3 a, #footer .contact-wrap h4 a {
         color: #64b2b2;
         text-decoration: none; }
+  #footer .disclaimer {
+    color: #999999;
+    text-align: center; }
 
 #main > section {
   padding: 4em 0; }
   #main > section .wrapper {
-    max-width: 1024px;
     transition: opacity 750ms ease-in;
     opacity: 1; }
     #main > section .wrapper.hidden {
@@ -194,62 +213,88 @@ body {
         #main > section.about .wrapper .about-wrap .left {
           border-radius: 50em; }
         #main > section.about .wrapper .about-wrap .right {
-          padding-left: 2em; }
-  #main > section.skillset h2:after {
-    content: '';
-    display: block;
-    width: 200px;
-    border-bottom: 1px solid #999999;
-    margin: 1em 0; }
-  #main > section.skillset .skillset-wrap {
-    display: flex;
-    justify-content: space-between; }
-    #main > section.skillset .skillset-wrap .left {
-      flex: 1 1 auto;
-      width: 75%;
-      padding-right: 2em; }
-    #main > section.skillset .skillset-wrap .right {
-      flex: 1 1 auto;
-      width: 200px; }
-  #main > section.experience {
+          padding-left: 3em; }
+  #main > section.experience .wrapper {
+    max-width: 1024px; }
+    #main > section.experience .wrapper h2 {
+      color: #fe0036; }
+      #main > section.experience .wrapper h2:after {
+        content: '';
+        display: block;
+        width: 200px;
+        border-bottom: 1px solid #999999;
+        margin: 1em 0; }
+    #main > section.experience .wrapper .experience-wrap {
+      display: flex;
+      justify-content: space-between; }
+      #main > section.experience .wrapper .experience-wrap .left {
+        flex: 1 1 auto;
+        width: 250px; }
+        #main > section.experience .wrapper .experience-wrap .left .experience-item {
+          margin-bottom: 3em; }
+          #main > section.experience .wrapper .experience-wrap .left .experience-item h3 {
+            margin-bottom: 0; }
+          #main > section.experience .wrapper .experience-wrap .left .experience-item p {
+            margin-bottom: 0.5em; }
+          #main > section.experience .wrapper .experience-wrap .left .experience-item a {
+            color: #64b2b2;
+            text-decoration: none; }
+      #main > section.experience .wrapper .experience-wrap .right {
+        flex: 1 1 auto;
+        width: 75%;
+        padding-left: 3em;
+        font-family: "Lato", sans-serif;
+        font-weight: 300; }
+  #main > section.skillset {
     background: url("img/dark-bg.jpg") top center no-repeat;
     background-size: cover;
     color: #ffffff; }
-    #main > section.experience h2 {
+    #main > section.skillset h2 {
       color: #ffffff; }
-      #main > section.experience h2:after {
+      #main > section.skillset h2:after {
         content: '';
         display: block;
         width: 200px;
         border-bottom: 1px solid #64b2b2;
         margin: 1em 0; }
-    #main > section.experience .experience-wrap {
+    #main > section.skillset .skillset-wrap {
       display: flex;
       justify-content: space-between; }
-      #main > section.experience .experience-wrap .left {
-        flex: 1 1 auto;
-        width: 200px; }
-        #main > section.experience .experience-wrap .left a {
-          color: #64b2b2;
-          text-decoration: none; }
-      #main > section.experience .experience-wrap .right {
+      #main > section.skillset .skillset-wrap .left {
         flex: 1 1 auto;
         width: 75%;
-        padding-left: 2em; }
+        padding-right: 2em; }
+        #main > section.skillset .skillset-wrap .left em {
+          font-style: normal;
+          color: #64b2b2; }
+      #main > section.skillset .skillset-wrap .right {
+        flex: 1 1 auto;
+        width: 200px; }
   #main > section.education {
     background: url("img/education.jpg") top center no-repeat;
     background-size: cover;
     color: #ffffff;
     text-align: center; }
-    #main > section.education .wrapper {
-      max-width: 700px; }
-      #main > section.education .wrapper h2 {
-        color: #ffffff; }
-        #main > section.education .wrapper h2:after {
-          content: '';
-          display: block;
-          width: 200px;
-          border-bottom: 1px solid #ffffff;
-          margin: 1em auto; }
+    #main > section.education .wrapper .section-title-wrap h2 {
+      color: #ffffff; }
+    #main > section.education .wrapper .section-title-wrap:after {
+      content: '';
+      display: block;
+      width: 200px;
+      border-bottom: 1px solid #ffffff;
+      margin: 2em auto; }
+    #main > section.education .wrapper .education-wrap {
+      padding: 1em 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      #main > section.education .wrapper .education-wrap .education-item {
+        flex: 1 1 auto;
+        width: 48%;
+        max-width: 600px;
+        padding: 1em 2em;
+        margin-bottom: 2em; }
+        #main > section.education .wrapper .education-wrap .education-item li:before {
+          color: #ffffff; }
 
 /*# sourceMappingURL=style.css.map */

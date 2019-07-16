@@ -1,6 +1,7 @@
 #header {
 	background:url('img/cover.jpg') top center no-repeat;
 	background-size:cover;
+	position:relative;
 
 	.cover {
 		display: flex;
@@ -32,5 +33,17 @@
 			text-shadow: 1px 1px 3px rgba($black, 0.2);
 			margin-bottom:0;
 		}
+	}
+
+	.next {
+		position:absolute;
+		left:calc(50% - 40px);
+		bottom:2em;
+		width:40px;
+		height:40px;
+		border-right:1px solid $white;
+		border-bottom:1px solid $white;
+		transform:rotate(45deg);
+		cursor:pointer;
 	}
 }
