@@ -9,6 +9,11 @@
 		justify-content: flex-start;
 		height:850px;
 		width:100%;
+		padding:4em 0;
+
+		@media screen and (max-width: 800px){
+			height:450px;
+		}
 
 		h1 {
 			@include raleway_thin();
@@ -16,6 +21,10 @@
 			color:$white;
 			text-shadow: 1px 1px 3px rgba($black, 0.2);
 			margin-bottom:0;
+
+			@media screen and (max-width: 800px){
+				font-size:4em;
+			}
 
 			&:after {
 				content:'';
@@ -32,12 +41,17 @@
 			color:$white;
 			text-shadow: 1px 1px 3px rgba($black, 0.2);
 			margin-bottom:0;
+			line-height: 1.2em;
+
+			@media screen and (max-width: 800px){
+				font-size:2em;
+			}
 		}
 	}
 
 	.next {
 		position:absolute;
-		left:calc(50% - 40px);
+		left:calc(50% - 20px);
 		bottom:2em;
 		width:40px;
 		height:40px;
@@ -45,5 +59,12 @@
 		border-bottom:1px solid $white;
 		transform:rotate(45deg);
 		cursor:pointer;
+
+		@media screen and (max-width: 800px){
+			width:30px;
+			height:30px;
+			left:calc(50% - 15px);
+
+		}
 	}
 }

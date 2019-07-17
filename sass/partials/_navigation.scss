@@ -8,6 +8,14 @@
 	padding:0.5em 0.5em;
 	box-shadow: 0 0 1px 0 rgba($black, 0.1);
 
+	@media screen and (max-width: 800px){
+		font-size:0.9em;
+	}
+
+	@media screen and (max-width: 650px){
+		display: none;
+	}
+
 	ul {
 		text-align:center;
 		margin:0;
@@ -19,6 +27,10 @@
 			text-transform: uppercase;
 			@include lato_light();
 			transition: color 100ms ease-in;
+
+			@media screen and (max-width: 800px){
+				margin:0;
+			}
 
 			&:hover {
 				cursor:pointer;
