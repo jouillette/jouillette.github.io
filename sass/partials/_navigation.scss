@@ -1,49 +1,50 @@
 .main-nav {
-	position:fixed;
-	z-index: 9999;
-	top:0;
-	left:0;
-	width:100%;
-	background:rgba($white, 0.95);
-	padding:0.5em 0.5em;
-	box-shadow: 0 0 1px 0 rgba($black, 0.1);
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba($white, 0.95);
+    padding: 0.5em 0.5em;
+    box-shadow: 0 0 1px 0 rgba($black, 0.1);
 
-	@media screen and (max-width: 800px){
-		font-size:0.9em;
-	}
+    @media screen and (max-width: $mobile) {
+        font-size: 0.8em;
+        padding: 0.5em 0.3em;
+    }
 
-	@media screen and (max-width: 650px){
-		display: none;
-	}
+    // @media screen and (max-width: 650px){
+    // 	display: none;
+    // }
 
-	ul {
-		text-align:center;
-		margin:0;
+    ul {
+        text-align: center;
+        margin: 0;
 
-		li {
-			display: inline-block;
-			margin:0 0.5em;
-			padding:0.5em;
-			text-transform: uppercase;
-			@include lato_light();
-			transition: color 100ms ease-in;
+        li {
+            display: inline-block;
+            margin: 0 0.5em;
+            padding: 0.5em;
+            text-transform: uppercase;
+            @include lato_light();
+            transition: color 100ms ease-in;
 
-			@media screen and (max-width: 800px){
-				margin:0;
-			}
+            @media screen and (max-width: 800px) {
+                margin: 0;
+            }
 
-			&:hover {
-				cursor:pointer;
-				color:$teal;
-			}
+            &:hover {
+                cursor: pointer;
+                color: $teal;
+            }
 
-			&:before {
-				content:none;
-			}
+            &:before {
+                content: none;
+            }
 
-			&.active {
-				color:$teal;
-			}
-		}
-	}
+            &.active {
+                color: $teal;
+            }
+        }
+    }
 }

@@ -1,29 +1,24 @@
 @mixin lato_light() {
-	font-family: $lato;
-	font-weight: 300;
+    font-family: $lato;
+    font-weight: 300;
+}
+
+@mixin lato() {
+    font-family: $lato;
+    font-weight: 400;
 }
 
 @mixin lato_bold() {
-	font-family: $lato;
-	font-weight: 900;
+    font-family: $lato;
+    font-weight: 900;
 }
 
-@mixin raleway_thin() {
-	font-family: $raleway;
-	font-weight: 100;
-}
-
-@mixin raleway_light() {
-	font-family: $raleway;
-	font-weight: 200;
-}
-
-@mixin raleway_bold() {
-	font-family: $raleway;
-	font-weight: 900;
+@mixin caveat() {
+    font-family: $caveat;
+    font-weight: 400;
 }
 
 @mixin fas() {
-	font-family: 'Font Awesome 5 Free';
-  	font-weight: 900; 
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
 }
