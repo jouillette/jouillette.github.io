@@ -137,6 +137,7 @@
 
             h2 {
                 color: $white;
+                max-width: 800px;
 
                 &:after {
                     content: '';
@@ -147,51 +148,48 @@
                 }
             }
 
-            .skillset-wrap {
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
+            .intro {
+                flex: 0 0 auto;
+                max-width: 1000px;
+                margin-bottom: 4em;
+                font-size: 1.1em;
 
-                .left {
-                    flex: 1 1 auto;
-                    width: calc(100% - 200px);
-                    padding-right: 2em;
+                em {
+                    font-style: normal;
+                    color: $teal;
+                }
+            }
 
-                    @media screen and (max-width: 750px) {
-                        width: 100%;
-                        padding: 0;
-                        margin-bottom: 2em;
-                    }
+            .grid {
+                flex: 1 1 auto;
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                gap: 2em;
+                text-align: center;
 
-                    em {
-                        font-style: normal;
-                        color: $teal;
-                    }
+                @media only screen and (max-width: 1100px) {
+                    grid-template-columns: repeat(4, 1fr);
                 }
 
-                .right {
-                    flex: 1 1 auto;
-                    width: 200px;
+                @media only screen and (max-width: 800px) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
 
-                    @media screen and (max-width: 750px) {
-                        width: 100%;
-                    }
+                @media only screen and (max-width: 600px) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
 
-                    ul {
-                        @media screen and (max-width: 750px) {
-                            display: flex;
-                            justify-content: center;
-                            flex-wrap: wrap;
-                        }
+                .imageWrap {
+                    margin-bottom: 1em;
+                    text-align: center;
 
-                        li {
-                            @media screen and (max-width: 750px) {
-                                padding: 0 0.5em;
-                            }
-                        }
+                    img {
+                        width: 100px;
+                        max-width: 100%;
                     }
                 }
             }
+
         }
 
         &.education {

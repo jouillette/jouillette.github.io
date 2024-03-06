@@ -424,6 +424,7 @@ body em {
 }
 #main > section.skillset h2 {
   color: #ffffff;
+  max-width: 800px;
 }
 #main > section.skillset h2:after {
   content: "";
@@ -432,47 +433,45 @@ body em {
   border-bottom: 2px solid #64b2b2;
   margin: 1em 0;
 }
-#main > section.skillset .skillset-wrap {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+#main > section.skillset .intro {
+  flex: 0 0 auto;
+  max-width: 1000px;
+  margin-bottom: 4em;
+  font-size: 1.1em;
 }
-#main > section.skillset .skillset-wrap .left {
-  flex: 1 1 auto;
-  width: calc(100% - 200px);
-  padding-right: 2em;
-}
-@media screen and (max-width: 750px) {
-  #main > section.skillset .skillset-wrap .left {
-    width: 100%;
-    padding: 0;
-    margin-bottom: 2em;
-  }
-}
-#main > section.skillset .skillset-wrap .left em {
+#main > section.skillset .intro em {
   font-style: normal;
   color: #64b2b2;
 }
-#main > section.skillset .skillset-wrap .right {
+#main > section.skillset .grid {
   flex: 1 1 auto;
-  width: 200px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2em;
+  text-align: center;
 }
-@media screen and (max-width: 750px) {
-  #main > section.skillset .skillset-wrap .right {
-    width: 100%;
+@media only screen and (max-width: 1100px) {
+  #main > section.skillset .grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-@media screen and (max-width: 750px) {
-  #main > section.skillset .skillset-wrap .right ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+@media only screen and (max-width: 800px) {
+  #main > section.skillset .grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (max-width: 750px) {
-  #main > section.skillset .skillset-wrap .right ul li {
-    padding: 0 0.5em;
+@media only screen and (max-width: 600px) {
+  #main > section.skillset .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+#main > section.skillset .grid .imageWrap {
+  margin-bottom: 1em;
+  text-align: center;
+}
+#main > section.skillset .grid .imageWrap img {
+  width: 100px;
+  max-width: 100%;
 }
 #main > section.education {
   background: url("img/education.jpg") top center no-repeat;
